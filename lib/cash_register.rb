@@ -9,12 +9,11 @@ class CashRegister
     @items = []
   end
 
-   transaction_prices = []
-   
+
   def add_item(title,price,quantity = 1)
     if quantity>1
       i=0
-      while i<quantity
+      while i < quantity
         @items.push(title)
         i+=1
       end
