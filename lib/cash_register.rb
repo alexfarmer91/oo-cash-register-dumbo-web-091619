@@ -14,7 +14,11 @@ class CashRegister
   end 
   
   
-  
+  def discount 
+    if employee_discount != nil
+    self.total = @total - (@total * (@employee_discount / 100))
+  end    
+  end 
   
   
   
