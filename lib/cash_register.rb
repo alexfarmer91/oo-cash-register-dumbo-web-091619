@@ -21,7 +21,7 @@ class CashRegister
       @items.push(title)
     end
     @total += price*quantity
-    @last_transaction_amount = @total
+    @last_transaction_amount = price*quantity
     @total
   end
 
@@ -38,6 +38,7 @@ class CashRegister
 
   def void_last_transaction()
     @items.pop
+    @total -= @last_transaction_amount
   end
 
 end
