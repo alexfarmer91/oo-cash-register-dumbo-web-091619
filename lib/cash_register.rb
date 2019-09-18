@@ -3,7 +3,7 @@ class CashRegister
   
   attr_writer
   attr_reader
-  attr_accessor :total, discount
+  attr_accessor :total, :discount
 
   def initialize(total=0, employee_discount = nil)
     @total = total
