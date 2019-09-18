@@ -9,16 +9,17 @@ class CashRegister
     @items = []
   end
 
-
+   transaction_prices = []
+   
   def add_item(title,price,quantity = 1)
     if quantity>1
       i=0
       while i<quantity
-        @items << title
+        @items.push(title)
         i+=1
       end
     else
-      @items << title
+      @items.push(title)
     end
     @total += price*quantity
     @last_transaction_amount = @total
